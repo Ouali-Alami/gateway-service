@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowed-headers: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+
+#here bad practice -> do it  via config service
+#do it here just for the demonstration i choose yml
+#lot of ways to do that to yml, properties , filters ...
+#allowed the gateway to receive requests from frontend web-app
